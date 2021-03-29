@@ -1,0 +1,31 @@
+public class basicProgram2StartFrom extends javax.swing.JDialog{
+
+
+	public static void main (String[] args){
+	
+		System.out.println("hello world");
+		
+		String frameName="basicProgram2StartFrom";
+
+		basicProgram2StartFrom b2p = new basicProgram2StartFrom(frameName,sampleJP());
+		
+	}//main
+	
+	public basicProgram2StartFrom(String name,javax.swing.JPanel jp){
+		super();
+		setDefaultCloseOperation(javax.swing.JDialog.DISPOSE_ON_CLOSE);
+		setTitle(name);
+		setContentPane(jp);
+		pack();
+		javax.swing.SwingUtilities.invokeLater(new Runnable(){public void run(){
+			setVisible(true);	}});
+	}		//	basicProgram2StartFrom constructor
+	
+	public static javax.swing.JPanel sampleJP(){
+		javax.swing.JPanel jp=new javax.swing.JPanel();
+		javax.swing.JButton jb=new javax.swing.JButton("sample");
+		jp.add(jb);
+		return jp;
+	}		//	sampleJP
+	
+}	//	basicProgram2StartFrom
